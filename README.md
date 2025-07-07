@@ -17,6 +17,9 @@ The first to get 3 in a row wins!
 
 # Code Structure
 The code starts at /index.html
+
 /index.html then uses /src/main.jsx
+
 /src/main.jsx uses /src/App.jsx and /src/index.css
+
 /src/App.jsx uses /src/App.css
