@@ -1,0 +1,164 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.game-info {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.board-data {
+  display: flex;
+  font-size: 0px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.status {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.timer {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.pieces-info {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 2rem;
+  background-color: #34495e;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.square {
+  background-color: #ecf0f1;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.square.player-x {
+  color: #e74c3c; /* Red for X */
+}
+
+.square.player-o {
+  color: #3498db; /* Blue for O */
+}
+
+.square:contains('X') {
+  color: #e74c3c;
+}
+
+.square:contains('O') {
+  color: #3498db;
+}
+
+.square:hover {
+  background-color: #d5dbdb;
+  transform: scale(1.05);
+}
+
+.square.selected {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.square.valid-move {
+  background-color: #2ecc71;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.game-controls {
+  margin-bottom: 2rem;
+}
+
+.game-controls button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.game-controls button:hover {
+  background-color: #c0392b;
+}
+
+.rules {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.win-counter {
+  text-align: center;
+  color:#333;
+  width: 300px;
+  max-height: 100px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  font-size: 16px;
+}
+
+.rules h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.rules ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.rules li {
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
